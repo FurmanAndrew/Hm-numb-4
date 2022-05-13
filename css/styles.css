@@ -192,10 +192,17 @@ body {
   margin: 0px;
   padding: 0px;
 }
-.icon-characteristic {
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 270px;
   height: 120px;
-  margin-bottom: 30px;
+  background-color: #f5f4fa;
+}
+.icon-characteristic {
+  width: 70px;
+  height: 70px;
   background-color: #f5f4fa;
 }
 .characteristic-name {
@@ -273,10 +280,10 @@ body {
   display: block;
   max-width: 100%;
   height: auto;
+  margin-bottom: 30px;
 }
 .item-name {
   margin: 0px;
-  margin-top: 30px;
   margin-bottom: 10px;
   color: var(--color-title);
   font-weight: 500;
@@ -316,13 +323,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  padding: 0;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   color: #afb1b8;
   background-color: #ffffff;
 }
-.network-link:hover {
+.network-link:hover,
+.network-link:focus {
   background-color: var(--secondary-link-color);
 }
 .network-list > .network-item:last-child {
@@ -334,7 +344,8 @@ body {
   background-size: cover;
   fill: currentColor;
 }
-.network-link:hover .icon-network {
+.network-link:hover .icon-network,
+.network-link:focus .icon-network {
   fill: var(--footer-text);
 }
 /* section fife */
@@ -353,26 +364,33 @@ body {
   padding: 0px;
 }
 .clients-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
   margin-right: 30px;
-  padding: 16px 32px;
   width: 170px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .clients-item:last-of-type {
   margin-right: 0px;
 }
-.clients-item:hover,
-.clients-item:focus {
-  border: 1px solid var(--secondary-link-color);
-}
+
 .clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
   color: #afb1b8;
+  border: 1px solid transparent;
 }
-.clients-item:hover > .clients-link,
-.clients-item:focus > .clients-link {
+.clients-link:hover,
+.clients-link:focus {
   color: var(--secondary-link-color);
+  border: 1px solid var(--secondary-link-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .icon-client {
   width: 106px;
@@ -476,7 +494,8 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.studio-link:hover {
+.studio-link:hover,
+.studio-link:focus {
   background-color: var(--secondary-link-color);
 }
 .footer-icon {
@@ -546,8 +565,8 @@ body {
   width: 370px;
   box-sizing: border-box;
 }
-.project-item:hover,
-.project-item:focus {
+.project-item a:hover,
+.project-item :focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
